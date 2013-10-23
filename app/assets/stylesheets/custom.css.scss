@@ -1,0 +1,96 @@
+@import 'bootstrap';
+
+body {
+	margin: 0;
+}
+
+#navbar {
+	width: 100%;
+	background-image: url(60degree_gray.png);
+	margin: 0;
+	height: 40px;
+    box-shadow: 0px 2px 9px  #888888;
+}
+
+#top_nav {
+	width: 960px;
+	margin: 0 auto;
+	font-family: Trebuchet MS1, Trebuchet MS, sans-serif;
+}
+
+.nav_content1 {
+	float: left;
+	border: 2px solid white;
+	margin: 0px;
+	margin-right: 10px;
+	height: 40px;
+	width: 200px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.nav_content2 {
+	text-align: center;
+	line-height: 40px;
+	float: right;
+	margin-left: 10px;
+}
+
+#search_bar {
+	width: 200px;
+	height: 30px;
+	float: right;
+	margin-top: 4px;
+	margin-left: 10px;
+}
+
+#nav_container {
+	width: 960px;
+	margin: 10px auto;
+}
+
+.nav {
+	float: left;
+	font-family: Trebuchet MS1, Trebuchet MS, sans-serif;
+	border: 2px solid #de8a55;
+	padding: 5px;
+	width: 76px;
+	text-align: center;
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+h1 {
+	border-bottom: 2px dashed #de8a55;
+}
+
+#container {
+	width: 960px;
+	margin: 50px auto;
+	font-family: Trebuchet MS1, Trebuchet MS, sans-serif;
+}
+
+#main {
+	width: 710px;
+	float: left;
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.question {
+	float: left;
+}
+
+#sidebar {
+	width: 230px;
+	float: right;
+	background-color: rgba(255, 255, 255, .7);
+
+}
+
+li {
+	list-style-type: none;
+}
+
+.clearfix {
+	clear: both;
+}

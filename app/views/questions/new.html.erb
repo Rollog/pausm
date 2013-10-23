@@ -1,0 +1,14 @@
+<h1>Post a Question</h1>
+
+<%= form_for @question do |q| %>
+
+	<p>
+		<%= q.label :subject, "Question:" %> <br>
+		<%= q.text_area :subject %>
+	</p>
+
+	<p>
+		<%= q.submit %>
+	</p>
+
+<% end %>
