@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 867a194afdc8f1c2cfcde8336732d908b3723076
+  revision: 5a34921251b6d159b6ef3aa2a9f9aebdc6ac687f
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
@@ -10,9 +10,9 @@ GIT
 
 GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 6cc04bda62ed7ccf71d445fa82e706cb696b4fdb
+  revision: 2b2defa3654b7ffbc747711f24a84cb3d54add95
   specs:
-    bootstrap-sass (3.0.0.0)
+    bootstrap-sass (3.0.0.0.rc2)
       sass (~> 3.2)
 
 GEM
@@ -42,10 +42,15 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    arel (4.0.0)
+    arel (4.0.1)
     atomic (1.1.14)
+    bcrypt-ruby (3.1.2)
+    better_errors (1.0.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     bson (2.0.0.rc3)
     builder (3.1.4)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -53,7 +58,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    daemons (1.1.9)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.0.2)
     hike (1.2.3)
     i18n (0.6.5)
@@ -87,6 +94,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.0)
       sprockets-rails (~> 2.0.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.3)
     railties (4.0.0)
       actionpack (= 4.0.0)
       activesupport (= 4.0.0)
@@ -112,6 +124,10 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    thin (1.6.0)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.5.0)
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -130,13 +146,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
+  better_errors
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
   mongoid!
   rails (= 4.0.0)
+  rails_12factor
   sass-rails (~> 4.0.0)
   sdoc
+  thin
   turbolinks
   uglifier (>= 1.3.0)
