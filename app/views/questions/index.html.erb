@@ -1,24 +1,19 @@
-<div id="nav_container">
-	<div class="nav">Questions</div>
-	<div class="nav">Genres</div>
-	<div class="nav">DAWs</div>
-	<div class="nav">Tags</div>
-	<div class="nav">Users</div>
-</div>
+<!-- <div id="main_pages">
+	<div class="m_page">Questions</div>
+	<div class="m_page">Genres</div>
+	<div class="m_page">DAWs</div>
+	<div class="m_page">Tags</div>
+	<div class="m_page">Users</div>
+</div> -->
 
-	<div id="main">
-	<h1>BROWSE THROUGH QUESTIONS</h1>
+	<div id="mainbar">
+	<h1>QUESTIONS</h1>
 		<ul>
 		<% @questions.each do |q| %>
-			<li class="question"><%= q.subject %></li>
-		<!-- 	<li><%= button_to "Reply", { action: "destroy", id: q.id },
-					method: :delete, data:{ confirm: "Are you sure?" } %></li> -->
-			<!-- <li><%= button_to "X", { action: "destroy", id: q.id },
-					method: :delete, data:{ confirm: "Are you sure?" } %></li> --><br />
+			<li><%= q.title %></li>
 		<% end %>
 		</ul>
 	</div>
 	<div id="sidebar">
 		ads
 	</div>
-	<div class="clearfix"></div>

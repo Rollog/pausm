@@ -1,28 +1,21 @@
-== README
+Name: "Pausm" - A Place to Get Sound Production Answers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description:
+	Music producers / sound engineers / (amateur) artists interested in getting their sound clips maximized in quality and improving their skills post questions, screenshots and sound clips (15 second max) for review by a community of fellow sound engineers in an open forum.  A "Stack Overflow" for music production so to speak.  The screenshots help pinpoint settings of specified Digital Audio Workstations (DAW).  A short sound clip focuses on a singular part of the song increasing the opportunity for quick listens, in which provides the user more feedback.
 
-Things you may want to cover:
+	Users up/down vote the question for relevance, and answers are collected directly below the questions.  Answers are then up or down voted based on relevance, thoroughness & resolution.
 
-* Ruby version
+	Criteria is sectioned by DAW > Plugin/Issue
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Features (in order by importance):
+	1. Post question
+	2. Answer question
+	3. Up Vote/Down Vote
+	4. Login/Create profile
+	5. Edit Profile
+	6. Upload image
+	7. Navigate/edit posts
+	8. Sign in with soundcloud/facebook
+	9. Upload screenshots
+	10. Upload song clip
+		- limit duration upload (max. 15 secs)

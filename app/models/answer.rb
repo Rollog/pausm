@@ -1,8 +1,11 @@
 class Answer
 	include Mongoid::Document
 
-	field :subject, type: String
-	field :description, type: String
+	field :body, type: String
 	
 	embedded_in :question
+
+	def has_answers
+	end
+	
 end

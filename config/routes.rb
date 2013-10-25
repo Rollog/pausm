@@ -1,5 +1,5 @@
 Pausm::Application.routes.draw do
-    root to: 'welcome#home'
+    root to: 'welcome#index'
     
     # get 'questions' => 'questions#index'
     # get 'questions/new' => 'questions#new' # shows form to add new types, must come before show
@@ -11,6 +11,8 @@ Pausm::Application.routes.draw do
     # delete 'questions/:id' => 'questions#destroy'
 
     resources :questions
+    resources :answers
+    
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

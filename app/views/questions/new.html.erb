@@ -2,13 +2,16 @@
 
 <%= form_for @question do |q| %>
 
-	<p>
-		<%= q.label :subject, "Question:" %> <br>
-		<%= q.text_area :subject %>
-	</p>
+	<%= q.label :title, "Question:" %> <br>
+	<%= q.text_field :title %>
+	<br>
+	<br>
+	<%= q.label :body %> <br>
+	<%= q.text_area :body %>
+	<br>
+	<br>
 
-	<p>
-		<%= q.submit %>
-	</p>
+	<%= q.submit "SUBMIT" %>
+
 
 <% end %>

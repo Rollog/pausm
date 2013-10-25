@@ -1,76 +1,79 @@
+
 @import 'bootstrap';
+$mainfont: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 
 body {
 	margin: 0;
+	padding-top: 25px;
 }
 
-#navbar {
+.navbar-fixed-top {
 	width: 100%;
 	background-image: url(60degree_gray.png);
 	margin: 0;
-	height: 40px;
-    box-shadow: 0px 2px 9px  #888888;
+  box-shadow: 0px 2px 9px  #888888;
 }
 
 #top_nav {
 	width: 960px;
 	margin: 0 auto;
-	font-family: Trebuchet MS1, Trebuchet MS, sans-serif;
+	font-family: $mainfont;
 }
 
-.nav_content1 {
+#logo, .category {
 	float: left;
 	border: 2px solid white;
 	margin: 0px;
 	margin-right: 10px;
-	height: 40px;
-	width: 200px;
-	line-height: 40px;
+	width: 100px;
+	line-height: 45px;
 	text-align: center;
 }
 
 .nav_content2 {
 	text-align: center;
-	line-height: 40px;
+	line-height: 45px;
 	float: right;
 	margin-left: 10px;
 }
 
 #search_bar {
 	width: 200px;
-	height: 30px;
+	height: 40px;
 	float: right;
 	margin-top: 4px;
 	margin-left: 10px;
 }
 
-#nav_container {
+#main_pages {
 	width: 960px;
-	margin: 10px auto;
+	margin: 0 auto;
 }
 
-.nav {
+.m_page {
 	float: left;
-	font-family: Trebuchet MS1, Trebuchet MS, sans-serif;
+	font-family: $mainfont;
 	border: 2px solid #de8a55;
 	padding: 5px;
 	width: 76px;
 	text-align: center;
+	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 10px;
 }
 
 h1 {
+	font-family: $mainfont;
 	border-bottom: 2px dashed #de8a55;
 }
 
 #container {
 	width: 960px;
 	margin: 50px auto;
-	font-family: Trebuchet MS1, Trebuchet MS, sans-serif;
+	font-family: $mainfont;
 }
 
-#main {
+#mainbar {
 	width: 710px;
 	float: left;
 	background-color: rgba(255, 255, 255, .7);
@@ -87,8 +90,41 @@ h1 {
 
 }
 
+#homediv {
+	width: 960px;
+	height: 200px;
+	border: 2px solid yellow;
+	margin: 0 auto;
+}
+
 li {
 	list-style-type: none;
+}
+
+.home_entries {
+	margin-top: 20px;
+	width: 960px;
+}
+
+.article_wrapper {
+	width: 33.3%;
+	height: 400px;
+	vertical-align: top;
+	float: left;
+	line-height: 0;
+	background-color: yellow;
+	*display: inline;
+  zoom: 1;
+}
+
+.home_entry {
+	text-align: center;
+	line-height: 380px;
+	width: 300px;
+	height: 380px;
+	margin: auto;
+	background-color: white;
+	margin-top: 10px; 
 }
 
 .clearfix {

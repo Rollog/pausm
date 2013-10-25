@@ -1,0 +1,7 @@
+<% @answers.each do |answer| %>
+	<%= @question = answer.question %>
+  <% next if @question.nil? %>
+<% end %>
+
+<%= render 'answers/answer', answer: answer, question: @question  %>
+

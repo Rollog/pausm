@@ -1,8 +1,8 @@
 class Question
 	include Mongoid::Document
 
-	field :subject, type: String
-	field :description, type: String
+	field :title, type: String
+	field :body, type: String
 
 	embeds_many :answers
 	
