@@ -10,6 +10,7 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
+		@answer = @question.answers.new
 	end
 
 	def create
@@ -20,6 +21,10 @@ class QuestionsController < ApplicationController
 	def destroy
 		Question.find(params[:id]).destroy
 		redirect_to questions_url
+	end
+
+	def update
+		render json: params
 	end
 
 end

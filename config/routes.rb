@@ -10,8 +10,14 @@ Pausm::Application.routes.draw do
     # post 'questions' => 'questions#create' # creating a new type
     # delete 'questions/:id' => 'questions#destroy'
 
-    resources :questions
+    resources :questions, :authentications
     resources :answers
+    resources :users
+    resources :sessions, only: [:new, :create, :destroy]
+    match '/signup',  to: 'users#new',            via: 'get'
+    match '/signin',  to: 'sessions#new',         via: 'get'
+    match '/signout', to: 'sessions#destroy',     via: 'delete'
+
     
 
   # The priority is based upon order of creation: first created -> highest priority.

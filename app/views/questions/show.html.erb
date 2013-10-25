@@ -1,11 +1,2 @@
 <%= @question.title %> <br>
 <%= @question.body %>
-
-<%= @question.answers %>
-
-<%= form_for @question.answers.new do |a| %>
-	<%= a.label :body %> 
-	<%= a.text_area :body %>
-	<br>
-	<%= a.submit "SUBMIT" %>
-<% end %>

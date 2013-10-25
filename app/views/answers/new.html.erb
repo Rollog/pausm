@@ -1,1 +1,17 @@
-new.html.erb
+<h1>Your Answer</h1>
+
+<%= form_for @question do |q| %>
+
+	<%= q.label :title, "Question:" %> <br>
+	<%= q.text_field :title %>
+	<br>
+	<br>
+	<%= q.label :body %> <br>
+	<%= q.text_area :body %>
+	<br>
+	<br>
+
+	<%= q.submit "SUBMIT" %>
+
+
+<% end %>new.html.erb
