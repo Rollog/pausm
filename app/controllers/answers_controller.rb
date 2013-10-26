@@ -1,11 +1,12 @@
 class AnswersController < ApplicationController
 
 	def index
-		@questions = Question.all
+		@answers = Answer.all
 	end
 
 	def new
-		@answer = @question.answers.new
+		@answer = Answer.new
+
 	end
 
 	def show
@@ -14,7 +15,10 @@ class AnswersController < ApplicationController
 
 	def create
 		@answer = Answer.create(params[:answer].permit(:body))
-		redirect_to :action => "show", :id => @answer._id
+		redirect_to questions_url :action => "show", :id => @answer._id
+		@answer.question = @question.find(params[:id])
+		
+		# @answer.user = current_user
 	end
 
 	def destroy
