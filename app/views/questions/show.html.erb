@@ -1,8 +1,16 @@
 <%= @question.title %> <br>
 <%= @question.body %>
 
-<% @question.answers.each do |a| %>
-	puts "test"
-	<%= a.body %>
-	puts "test"
+<% if @question.answers.size > 0 %>
+  <h2>Answers</h2>
+  <% for answer in @question.answers %>
+    <h3><%= answer.body %></h3>
+  <% end %>
+<% end %>
+
+<h2>New Answer</h2>
+<%= form_for [@question, Answer.new] do |f| %>
+  <p><%= f.label :body %>
+  <p><%= f.text_area :body, :rows => 10 %></p>
+  <p><%= f.submit %></p>
 <% end %>

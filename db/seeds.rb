@@ -11,7 +11,7 @@
 # gets rid of old data, so we can build on it as we go
 Question.destroy_all
 
-Question.create([{title: 'sample question: what is 2 + 2?'}])
+Question.create([{title: 'sample question: what is 2 + 2?', body: 'this is the body'}])
 
 
 

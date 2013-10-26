@@ -3,6 +3,7 @@ class Answer
 
 	field :body, type: String
 	
-	embedded_in :question
+	embedded_in :question, :inverse_of => :answers
+
 	
 end

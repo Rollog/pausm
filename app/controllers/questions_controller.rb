@@ -2,15 +2,29 @@ class QuestionsController < ApplicationController
 
 	def index
 		@questions = Question.all
+
+		respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @questions }
+    end
 	end
 
 	def new
 		@question = Question.new
+
+		respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @question }
+    end
 	end
 
 	def show
 		@question = Question.find(params[:id])
 	end
+
+	def edit
+    @question = question.find(params[:id])
+  end
 
 	def create
 		@question = Question.create(params[:question].permit(:title, :body))
@@ -20,10 +34,6 @@ class QuestionsController < ApplicationController
 	def destroy
 		Question.find(params[:id]).destroy
 		redirect_to questions_url
-	end
-
-	def update
-		render json: params
 	end
 
 end

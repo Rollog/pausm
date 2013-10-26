@@ -10,8 +10,10 @@ Pausm::Application.routes.draw do
     # post 'questions' => 'questions#create' # creating a new type
     # delete 'questions/:id' => 'questions#destroy'
 
-    resources :questions, :authentications
-    resources :answers
+    resources :questions do
+      resources :answers
+    end
+    resources :authentications
     resources :users
     resources :sessions, only: [:new, :create, :destroy]
     match '/signup',  to: 'users#new',            via: 'get'
