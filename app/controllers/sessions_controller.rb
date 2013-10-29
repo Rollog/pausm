@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
   def destroy
   	session[:user_id] = nil
-  	redirect_to authentications_url,
+  	redirect_to new_authentication_url,
   	notice: "You've been logged out."
   end
 end

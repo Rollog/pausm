@@ -5,16 +5,19 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
+
 	end
 
 	def create
+		@user = User.new
 		User.create(params[:user]
-			.permit(:email, :password, :password_confirmation))
-		redirect_to action:"new"
+			.permit(:name, :email, :password, :password_confirmation))
+
+		redirect_to users_id
 	end
 
 	def show
-		@User = User.find(params[:id])
+		@user = User.find(params[:id])
 	end
 
 	def destroy

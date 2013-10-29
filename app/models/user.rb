@@ -3,9 +3,6 @@ require 'bcrypt'
 class User
   include Mongoid::Document
   # include Mongo::Voter
-
-  acts_as_voter
-
   # stores password, but then forgets it
   attr_accessor :password, :password_confirmation
 
@@ -14,8 +11,7 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
-  # has_many :answers
-  # has_many :questions
+  # has_one :profile
 
   # This will tell us what regions to show on the map
   validates :email, presence: true

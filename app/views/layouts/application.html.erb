@@ -8,22 +8,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div id="top_nav">
-			<%= image_tag "pausm_v8.svg", :class => "mainlogo" %>
-			<div class="category">Questions<span class="glyphicon glyphicon-chevron-down"></span></div>
-			<div class="category">Browse By<span class="glyphicon glyphicon-chevron-down"></span></div>
+			<%= image_tag 'pausm_v8.svg', class: "mainlogo" %>
+			<div class="category">Questions</div>
+			<div class="category">Categories</div>
 			<input type="search" id="search_bar" name="search" placeholder="search">
-			<div class="nav_content2">Login</div>
-			<div class="nav_content2">SignUp</div>
+			<div><%= link_to "Sign Up", signup_path, class: "signin" %></div>
+			<div><%= link_to "Log in", signin_path, class: "login" %> </div>
 		</div>
 	</nav>
 
-<div id="container">
-	
-<%= yield %> <!-- grabs templates and other info from elsewhere -->
+	<div id="container">
+		
+		<%= yield %> <!-- grabs templates and other info from elsewhere -->
 
-</div>
+	</div>
 
 </body>
 </html>

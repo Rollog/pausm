@@ -1,1 +1,4 @@
-<%= button_to "Sign out", signout_path, method: "delete" %>
+<div class="page_container">
+	User ID: <%= session[:user_id] %>
+	<%= button_to "Sign out", signout_path, method: "delete" %>
+</div>

@@ -6,9 +6,4 @@ class AnswersController < ApplicationController
 		redirect_to @question, :notice => "Answer created!"
 	end
 
-	def upvote
-		@answer = Answer.find(params[:answer_id])
-		@answer.vote_value += 1
-	end
-
 end
