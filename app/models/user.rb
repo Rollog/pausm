@@ -11,12 +11,11 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
-  # has_one :profile
-
   # This will tell us what regions to show on the map
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
   validates :password, confirmation: true
+  # validates_length_of :password, in: 6..20, on: :create
 
   # before sent to database, save a hash of the password
   before_save :hash_password

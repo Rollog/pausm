@@ -9,11 +9,14 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new
 		User.create(params[:user]
 			.permit(:name, :email, :password, :password_confirmation))
 
-		redirect_to users_id
+		user = User.find_by(email: params[:user][:email])
+		if user.authenticate(params[:user][:password])
+        session[:user_id] = user.id
+        redirect_to user
+    end
 	end
 
 	def show

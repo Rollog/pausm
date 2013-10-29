@@ -1,10 +1,11 @@
 @import 'bootstrap';
-$mainfont: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+$mainfont: "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 
 body {
 	margin: 0;
 	padding-top: 50px;
 	background-color: rgba(100, 255, 255, 1);
+	font-family: $mainfont;
 }
 
 .navbar-fixed-top {
@@ -16,9 +17,8 @@ body {
 }
 
 #top_nav {
-	width: 98%;
+	width: 96%;
 	margin: 0 auto;
-	font-family: $mainfont;
 }
 
 .category {
@@ -31,9 +31,21 @@ body {
 	line-height: 53px;
 	text-align: center;
 	font-size: 15px;
+	color: black;
+}
+.category:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.mainlogo {
+	width: 185px;
+	height: auto;
+	float: left;
 }
 
 .signin {
+	text-decoration:none; 
 	text-align: center;
 	line-height: 31px;
 	float: right;
@@ -48,10 +60,12 @@ body {
 }
 .signin:hover {
 	background-color: white;
-	font-weight: bold;
+	text-decoration: none;
+	color: black;
 }
 
 .login {
+	text-decoration:none; 
 	text-align: center;
 	line-height: 53px;
 	float: right;
@@ -59,6 +73,10 @@ body {
 	margin-right: 0;
 	color: white;
 	font-size: 16px;
+}
+.login:hover {
+	text-decoration: none;
+	color: black; 
 }
 
 #search_bar {
@@ -70,6 +88,7 @@ body {
 }
 
 h1 {
+	margin: 0;
 	font-family: $mainfont;
 }
 
@@ -81,23 +100,23 @@ h1 {
 }
 
 .page_container {
-	width: 98%;
+	width: 96%;
 	margin: 20px auto;
 }
 
-#mainbar {
+.mainbar {
 	width: 70%;
 	float: left;
-	background-color: rgba(255, 255, 255, .7);
+	background-color: rgba(73, 208, 255, .2);
 }
 
 .question {
 	float: left;
 }
 
-#sidebar {
-	width: 20%;
+.sidebar {
+	width: 28%;
 	float: right;
-	background-color: rgba(255, 255, 255, .7);
+	background-color: rgba(73, 208, 255, .2);
 
 }

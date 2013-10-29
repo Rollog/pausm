@@ -1,15 +1,40 @@
 @import 'bootstrap';
+$mainfont: "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 
-.question_content {
-	border-top: 1px solid black;
-	width: 100%;
-}
-
-.answer_content {
+.question_content, .answer_content {
 	border-top: 1px solid black;
 	width: 100%;
 }
 
 .new_answer_content {
 	width: 100%;
+}
+
+.liststyle {
+	border-bottom: 2px dashed rgba(150, 255, 255, 1);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.q_list {
+	font-size: 20px;
+}
+
+.vote_btn {
+	height: 20px;
+	width: 20px;
+	border: 1px solid black;
+}
+
+.question_stack {
+	display: inline-block;
+}
+
+.touch_q {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.user_img {
+	float: left;
 }

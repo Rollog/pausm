@@ -1,19 +1,33 @@
 <div class="page_container">
-	<ul class="nav nav-tabs">
-	  <li><a href="#home" data-toggle="tab">Newest</a></li>
-	  <li><a href="#profile" data-toggle="tab">Featured</a></li>
-	  <li><a href="#messages" data-toggle="tab">Voted</a></li>
-	</ul>
-
-	<div id="mainbar">
 	<h1>QUESTIONS</h1>
-		<ul>
-		<% @questions.each do |q| %>
-			<li><%= link_to (q.title), question_path(q.id) %></li>
-		<% end %>
+	<div class="mainbar">
+		<ul class="nav nav-tabs">
+		  <li><a href="#home" data-toggle="tab">Newest</a></li>
+		  <li><a href="#profile" data-toggle="tab">Featured</a></li>
+		  <li><a href="#messages" data-toggle="tab">Voted</a></li>
 		</ul>
+		
+			<ul>
+			<% @questions.reverse_each do |q| %>
+				<li class="liststyle">
+					<!-- <div class="question_stack">
+						<div class="vote_btn">UP</div>
+						<div class="vote_btn">DOWN</div>
+					</div> -->
+					<div class="question_stack">
+						<%= link_to (q.title), question_path(q.id), class: "q_list" %><br>
+						<div class="touch_q">Follow</div>
+						<div class="touch_q">Edit</div>
+						<div class="touch_q">Delete</div>
+						<!-- <div class="user_img">User</div> -->
+					</div>
+				</li>
+			<% end %>
+			</ul>
+			
 	</div>
-	<div id="sidebar">
+	
+	<div class="sidebar">
 		ads
 	</div>
 </div>

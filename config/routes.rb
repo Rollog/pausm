@@ -22,6 +22,7 @@ Pausm::Application.routes.draw do
 
   resources :authentications
   resources :users
+  resources :pages
   
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup',  to: 'users#new',            via: 'get'
