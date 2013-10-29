@@ -1,24 +1,32 @@
 Pausm::Application.routes.draw do
-    root to: 'welcome#index'
-    
-    # get 'questions' => 'questions#index'
-    # get 'questions/new' => 'questions#new' # shows form to add new types, must come before show
-    # get 'questions/:id' => 'questions#show'
+  get "pages/home"
+  get "pages/daws"
+  get "pages/genres"
 
-    # get 'questions/edit/:id' => 'questions#edit'
+  root to: 'welcome#index'
+  
+  # get 'questions' => 'questions#index'
+  # get 'questions/new' => 'questions#new' # shows form to add new types, must come before show
+  # get 'questions/:id' => 'questions#show'
 
-    # post 'questions' => 'questions#create' # creating a new type
-    # delete 'questions/:id' => 'questions#destroy'
+  # get 'questions/edit/:id' => 'questions#edit'
 
-    resources :questions do
-      resources :answers
+  # post 'questions' => 'questions#create' # creating a new type
+  # delete 'questions/:id' => 'questions#destroy'
+
+  resources :questions do
+    resources :answers do
+      get 'answers/upvotes/:id' => 'answers#upvote'
     end
-    resources :authentications
-    resources :users
-    resources :sessions, only: [:new, :create, :destroy]
-    match '/signup',  to: 'users#new',            via: 'get'
-    match '/signin',  to: 'authentications#new',         via: 'get'
-    match '/signout', to: 'sessions#destroy',     via: 'delete'
+  end
+
+  resources :authentications
+  resources :users
+
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'authentications#new',  via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
 
     
 

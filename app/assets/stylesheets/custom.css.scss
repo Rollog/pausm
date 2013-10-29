@@ -5,10 +5,12 @@ $mainfont: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGot
 body {
 	margin: 0;
 	padding-top: 25px;
+	background-color: rgba(100, 255, 255, 1);
 }
 
 .navbar-fixed-top {
 	width: 100%;
+	height: 53px;
 	background-image: url(60degree_gray.png);
 	margin: 0;
   box-shadow: 0px 2px 9px  #888888;
@@ -20,57 +22,43 @@ body {
 	font-family: $mainfont;
 }
 
-#logo, .category {
+.category {
 	float: left;
-	border: 2px solid white;
 	margin: 0px;
-	margin-right: 10px;
+	margin-right: 15px;
+	margin-top: 0;
+	margin-bottom: 0; 
 	width: 100px;
-	line-height: 45px;
+	height: 53px;
+	line-height: 53px;
 	text-align: center;
+	font-size: 15px;
 }
 
 .nav_content2 {
 	text-align: center;
-	line-height: 45px;
+	line-height: 53px;
 	float: right;
 	margin-left: 10px;
 }
 
 #search_bar {
 	width: 200px;
-	height: 40px;
+	height: 45px;
 	float: right;
 	margin-top: 4px;
 	margin-left: 10px;
 }
 
-#main_pages {
-	width: 960px;
-	margin: 0 auto;
-}
-
-.m_page {
-	float: left;
-	font-family: $mainfont;
-	border: 2px solid #de8a55;
-	padding: 5px;
-	width: 76px;
-	text-align: center;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 10px;
-}
-
 h1 {
 	font-family: $mainfont;
-	border-bottom: 2px dashed #de8a55;
 }
 
 #container {
-	width: 960px;
-	margin: 50px auto;
+	width: 100%;
+	margin: 0px;
 	font-family: $mainfont;
+	position: relative;
 }
 
 #mainbar {
@@ -88,45 +76,4 @@ h1 {
 	float: right;
 	background-color: rgba(255, 255, 255, .7);
 
-}
-
-#homediv {
-	width: 960px;
-	height: 200px;
-	border: 2px solid yellow;
-	margin: 0 auto;
-}
-
-li {
-	list-style-type: none;
-}
-
-.home_entries {
-	margin-top: 20px;
-	width: 960px;
-}
-
-.article_wrapper {
-	width: 33.3%;
-	height: 400px;
-	vertical-align: top;
-	float: left;
-	line-height: 0;
-	background-color: yellow;
-	*display: inline;
-  zoom: 1;
-}
-
-.home_entry {
-	text-align: center;
-	line-height: 380px;
-	width: 300px;
-	height: 380px;
-	margin: auto;
-	background-color: white;
-	margin-top: 10px; 
-}
-
-.clearfix {
-	clear: both;
 }

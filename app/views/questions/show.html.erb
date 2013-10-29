@@ -1,16 +1,18 @@
-<%= @question.title %> <br>
-<%= @question.body %>
+<h1><%= @question.title %></h1> <br>
+<div class="question_content"><p><%= @question.body %></p></div>
 
 <% if @question.answers.size > 0 %>
-  <h2>Answers</h2>
-  <% for answer in @question.answers %>
-    <h3><%= answer.body %></h3>
+  <h3>Answers</h3>
+  <% @question.answers.each do |a| %>
+	<%= a.body %> <br>
+	<%= link_to 'vote for this post!', { controller: :answers, action: "upvote", id: a.id }, method: :post %>
   <% end %>
 <% end %>
+<!-- link_to (q.title), question_path(q.id) -->
 
-<h2>New Answer</h2>
+
+<h4>New Answer</h4>
 <%= form_for [@question, Answer.new] do |f| %>
-  <p><%= f.label :body %>
-  <p><%= f.text_area :body, :rows => 10 %></p>
+  <p class="new_answer_content"><%= f.text_area :body, :rows => 10 %></p>
   <p><%= f.submit %></p>
 <% end %>

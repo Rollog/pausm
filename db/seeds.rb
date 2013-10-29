@@ -13,5 +13,7 @@ Question.destroy_all
 
 Question.create([{title: 'sample question: what is 2 + 2?', body: 'this is the body'}])
 
+# @question.answers.votes.create([{upvote: 33}])
+
 
 

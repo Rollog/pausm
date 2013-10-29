@@ -1,0 +1,31 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.daw_container {
+	width: 33.3%;
+	height: 320px;
+	float: left;
+	background: yellow;
+}
+
+.daw_name {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	text-align: center;
+	background: gray;
+}
+
+.genre_container {
+	width: 33.3%;
+	height: 320px;
+	float: left;
+}
+
+.genre_name {
+	width: 95%;
+	height: 95%;
+	float: left;
+	background: gray;
+}

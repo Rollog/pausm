@@ -2,7 +2,11 @@ require 'bcrypt'
 
 class User
   include Mongoid::Document
+  # include Mongo::Voter
 
+  acts_as_voter
+
+  # stores password, but then forgets it
   attr_accessor :password, :password_confirmation
 
   field :name, type: String
@@ -10,13 +14,15 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
+  # has_many :answers
+  # has_many :questions
+
   # This will tell us what regions to show on the map
-
-
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
   validates :password, confirmation: true
 
+  # before sent to database, save a hash of the password
   before_save :hash_password
 
   def authenticate(password)

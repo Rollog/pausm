@@ -2,20 +2,10 @@ class QuestionsController < ApplicationController
 
 	def index
 		@questions = Question.all
-
-		respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @questions }
-    end
 	end
 
 	def new
 		@question = Question.new
-
-		respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @question }
-    end
 	end
 
 	def show
@@ -23,7 +13,7 @@ class QuestionsController < ApplicationController
 	end
 
 	def edit
-    @question = question.find(params[:id])
+    @question = Question.find(params[:id])
   end
 
 	def create

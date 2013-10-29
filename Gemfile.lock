@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 5a34921251b6d159b6ef3aa2a9f9aebdc6ac687f
+  revision: 769cadd48eaae203578b9915f35ac276de16ce0d
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 2b2defa3654b7ffbc747711f24a84cb3d54add95
+  revision: c3f74a5b38792d7164f64af7de452f6df37ca376
   specs:
     bootstrap-sass (3.0.0.0.rc2)
       sass (~> 3.2)
@@ -138,9 +138,9 @@ GEM
     turbolinks (1.3.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.2.1)
+    uglifier (2.3.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
+      json (>= 1.8.0)
 
 PLATFORMS
   ruby
