@@ -2,12 +2,10 @@ class Answer
 	include Mongoid::Document
 
 	field :body, type: String
-	field :vote_value, type: Integer, :default => 0
+	# field :vote_value, type: Integer, :default => 0
 	
-	embedded_in :question, :inverse_of => :answers
+	# belongs_to :user
+	belongs_to :question
 
-	def method_name
-		
-	end
-
+	# has_many :votes, as: :voteable
 end

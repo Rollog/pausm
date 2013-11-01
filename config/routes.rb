@@ -14,11 +14,15 @@ Pausm::Application.routes.draw do
   # post 'questions' => 'questions#create' # creating a new type
   # delete 'questions/:id' => 'questions#destroy'
 
+  post 'questions/:id/edit' => 'questions#update'
+
   resources :questions do
-    resources :answers do
-      get 'answers/upvotes/:id' => 'answers#upvote'
-    end
+    resources :answers, :tags
   end
+
+  get 'upvote' => 'questions#upvote'
+  get 'downvote' => 'questions#downvote'
+  
 
   resources :authentications
   resources :users

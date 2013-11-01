@@ -29,3 +29,24 @@
 	float: left;
 	background: gray;
 }
+
+.category_container {
+	width: 33.3%;
+	height: 500px;
+	float: left;
+}
+
+.category_name {
+	width: 95%;
+	height: 95%;
+	float: left;
+	background: gray;
+}
+
+.c_list {
+	display: none;
+}
+
+.category_name, .c_list:hover {
+	display: block;
+}

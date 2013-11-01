@@ -1,6 +1,13 @@
 <div class="page_container">
 	<h1><%= @question.title %></h1> <br>
-	<div class="question_content"><p><%= @question.body %></p></div>
+	<div class="question_content"><p>
+		<%= @question.body %></p></div>
+		<%= link_to "U", upvote_path(id: @question.id) %>
+		<br>
+		<%= @question.vote_count %><br>
+	<%= link_to 'Edit', edit_question_path(@question) %>
+	<%# link_to 'Delete', edit_question_path(@question) %>
+	Tags: <%= raw @question.tags.map(&:tag_name).map { |t| link_to t, new_question_tag_path(t) }.join(', ') %>
 
 	<% if @question.answers.size > 0 %>
 	  <h3>Answers</h3>
@@ -8,7 +15,6 @@
 		<%= a.body %> <br>
 	  <% end %>
 	<% end %>
-
 
 	<h4>New Answer</h4>
 	<%= form_for [@question, Answer.new] do |f| %>

@@ -6,6 +6,7 @@ gem 'rails', '4.0.0'
 gem "mongoid", github: "mongoid/mongoid"
 gem 'bcrypt-ruby'
 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass' #the latest boostrap with SASS gem (via thomas-mcdonald)

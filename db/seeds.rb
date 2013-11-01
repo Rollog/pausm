@@ -11,9 +11,11 @@
 # gets rid of old data, so we can build on it as we go
 Question.destroy_all
 
-Question.create([{title: 'sample question: what is 2 + 2?', body: 'this is the body'}])
+Question.create([{title: 'sample question: what is 2 + 2?', body: 'this is the body'},
+	{title: 'sample question: what is 10 + 10?', body: 'this is the body'}
+	])
 
-# @question.answers.votes.create([{upvote: 33}])
-
-
-
+q = Question.all[0]
+q.votes.create(value: 1208)
+q = Question.all[1]
+q.votes.create(value: 244)

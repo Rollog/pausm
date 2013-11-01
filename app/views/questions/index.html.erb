@@ -10,16 +10,18 @@
 			<ul>
 			<% @questions.reverse_each do |q| %>
 				<li class="liststyle">
-					<!-- <div class="question_stack">
-						<div class="vote_btn">UP</div>
-						<div class="vote_btn">DOWN</div>
-					</div> -->
+					<div class="question_stack">
+						<div class="vote_btn"><%= link_to "U", upvote_path(id: q.id) %></div>
+						<%= q.vote_count %>
+						<div class="vote_btn"><%= link_to "D", downvote_path(id: q.id) %></div>
+					</div>
 					<div class="question_stack">
 						<%= link_to (q.title), question_path(q.id), class: "q_list" %><br>
 						<div class="touch_q">Follow</div>
-						<div class="touch_q">Edit</div>
-						<div class="touch_q">Delete</div>
-						<!-- <div class="user_img">User</div> -->
+						<div class="touch_q"><%= link_to 'Edit', edit_question_path(q) %></div>
+						<div class="touch_q"><%#  button_to "X", { action: "destroy", id: q.id },
+						{method: :delete, data: { confirm: "Are you sure?" }, :class => "mybutton" } %></div>
+						<div class="user_img">User</div>
 					</div>
 				</li>
 			<% end %>
