@@ -1,5 +1,24 @@
-<%= image_tag "homestudio.jpeg", :class => "homediv" %>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 
+	<script type="text/javascript"> 
+	
+	$(window).bind('scroll',function(e){
+	    parallaxScroll();
+	});
+	 
+	function parallaxScroll(){
+	    var scrolled = $(window).scrollTop();
+	    $('.homediv').css('top',(0-(scrolled*.2))+'px');
+	    $('.hometext').css((0-(scrolled*.2))+'px');
+	    $('.home_container').css('top',(0-(scrolled*.8))+'px');
+	}
+	</script>
+
+<header class="homediv">
+	<%# image_tag "homestudio.jpeg", :class => "homeslider" %>
+	
+</header>
+<h1 class="hometext">PAUSE. FIX. PLAY.</h1>
 <div id="home_container">
 	<div class="home_entries">
 		<article class="article_wrapper"><div class="home_entry">Random Question 1</div></article>

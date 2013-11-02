@@ -6,7 +6,7 @@
 		<br>
 		<%= @question.vote_count %><br>
 	<%= link_to 'Edit', edit_question_path(@question) %>
-	<%# link_to 'Delete', edit_question_path(@question) %>
+	<%# link_to 'Delete', edit_question_path(@question) %><br>
 	Tags: <%= raw @question.tags.map(&:tag_name).map { |t| link_to t, new_question_tag_path(t) }.join(', ') %>
 
 	<% if @question.answers.size > 0 %>

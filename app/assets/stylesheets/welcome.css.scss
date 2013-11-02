@@ -1,9 +1,44 @@
 .homediv {
+	position: relative;
+	background-image: url(homestudio.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
-	height: auto;
+	height: 780px;
+	padding-top: 100px;
 	margin: 0;
-	opacity: .9;
-	z-index: -1;
+}
+
+// .homediv {
+// 	position: relative;
+// 	top: -70px;
+// 	background-image: url(homestudio.jpeg);
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+// 	width: 100%;
+// 	height: 720px;
+// 	padding-top: 100px;
+// 	margin: 0;
+
+// }
+
+// .homeslider{
+// 	width: 100%;
+// 	height: auto;
+// 	margin: 0;
+// 	opacity: .9;
+// 	margin-top: -70px;
+// }
+
+.hometext {
+	margin-top: 370px;
+	width: 70%;
+	font-size: 80px;
+	text-align: right;
+	color: #d2315d;
+	background-color: rgba(255, 255, 255, .68);
+	position: absolute;
+	top: 90px;
 }
 
 li {
@@ -14,7 +49,9 @@ li {
 	margin: 0;
 	width: 100%;
 	height: 400px;
-	background-color: rgba(100, 255, 255, .4);
+	background-color: rgba(178, 223, 246, 1);
+	position: relative;
+	margin-top: -200px;
 }
 
 .home_entries {
@@ -37,3 +74,4 @@ li {
 	background-color: white;
 	margin-top: 10px; 
 }
+
