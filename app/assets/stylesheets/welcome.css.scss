@@ -9,6 +9,45 @@
 	margin: 0;
 }
 
+.glyphicon-expand {
+	font-size: 170px;
+	position: absolute;
+	top: 170px;
+	left: 44%;
+	color: bisque;
+	-webkit-text-stroke-width: 4px;
+	-webkit-text-stroke-color: #3D3D3D;
+	opacity: .9;
+}
+
+.glyphicon-expand:hover {
+	color: white;
+}
+
+.glyphicon-repeat {
+	display: none;
+	font-size: 30px;
+	position: absolute;
+	top: 73%;
+	right: 17%;
+	color: bisque;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+	z-index: 2;
+}
+
+.glyphicon-remove {
+	display: none;
+	font-size: 30px;
+	position: absolute;
+	top: 9%;
+	right: 17%;
+	color: bisque;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+	z-index: 2;
+}
+
 // .homediv {
 // 	position: relative;
 // 	top: -70px;
@@ -39,6 +78,8 @@
 	background-color: rgba(255, 255, 255, .68);
 	position: absolute;
 	top: 90px;
+	opacity: .9;
+	padding: 7px;
 }
 
 li {
@@ -49,8 +90,8 @@ li {
 	margin: 0;
 	width: 100%;
 	height: 400px;
-	background-color: rgba(178, 223, 246, 1);
-	position: relative;
+	background-color: lightblue;
+	position: absolute;
 	margin-top: -200px;
 }
 

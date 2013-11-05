@@ -11,7 +11,7 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
-  # has_many :questions
+  has_many :questions
   # has_many :tags
   # has_many :answers
 

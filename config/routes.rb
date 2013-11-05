@@ -14,6 +14,10 @@ Pausm::Application.routes.draw do
   # post 'questions' => 'questions#create' # creating a new type
   # delete 'questions/:id' => 'questions#destroy'
 
+  resources :users do
+    resources :questions
+  end
+
   post 'questions/:id/edit' => 'questions#update'
 
   resources :questions do
@@ -25,7 +29,9 @@ Pausm::Application.routes.draw do
   
 
   resources :authentications
-  resources :users
+
+  
+
   resources :pages
   
   resources :sessions, only: [:new, :create, :destroy]

@@ -1,8 +1,8 @@
 <nav class="navbar navbar-fixed-top" role="navigation">
 	<div id="top_nav">
 		<a href="/"><%= image_tag 'pausm_v8.svg', class: "mainlogo" %></a>
-		<div><%= link_to "Questions", "questions", class: "category" %></div>
-		<div><%= link_to "Categories", "pages", class: "category" %></div>
+		<div><%= link_to "Questions", questions_path, class: "category" %></div>
+		<div><%= link_to "Categories", pages_path, class: "category" %></div>
 		<input type="search" id="search_bar" name="search" placeholder="search">
 		<% if current_user %>
 			<div><%= link_to "Sign out", signout_path, method: "delete", class: "signin" %></div>

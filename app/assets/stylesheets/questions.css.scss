@@ -1,13 +1,48 @@
 @import 'bootstrap';
 $mainfont: "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 
+.question_header {
+	color: black;
+	display: inline-block;
+}
+
+.actual_question {
+	position: absolute;
+	bottom: -5px;
+	border: 2px solid #d2315d;
+	color: #3D3D3D;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 87%;
+	height: 75px;
+	line-height: 75px;
+}
+
 .question_content, .answer_content {
-	border-top: 1px solid black;
-	width: 100%;
+	width: 60%;
+	margin-left: 40px;
+	padding-bottom: 20px; 
+	border-bottom: 2px solid #d2315d;
 }
 
 .new_answer_content {
-	width: 100%;
+	width: 63%;
+}
+.question_nav_container {
+	position: relative;
+	margin-bottom: 12px; 
+}
+
+.questions_nav {
+	width: 100px;
+	color: white;
+	margin-right: 10px;
+	text-align: center;
+	display: inline-block;
+	background-color: #d2315d;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
 }
 
 .liststyle {
@@ -18,23 +53,38 @@ $mainfont: "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 .q_list {
 	font-size: 20px;
 	padding-left: 10px;
+	color: #f0565d;
+	background-color: whitesmoke;
+	padding: 4px;
+	margin: 2px;
+}
+.q_list {
+	text-decoration: none;
 }
 
 .q_part {
 	height: 75px;
 	width: 90%;
-	border-bottom: 2px solid #d2315d;
+	border-bottom: 2px solid #3D3D3D;
+
 }
 
 .vote_wrapper {
-	border: 2px solid #d2315d;
 	height: 75px;
+}
+
+.vote_wrapper_show {
+	height: 78px;
+	display: inline-block;
 }
 
 .vote_btn {
 	text-align: center;
 	font-weight: 500;
 	font-size: 16px;
+}
+.vote_btn:hover {
+	background-color: #3D3D3D;
 }
 
 .question_stack {
@@ -43,12 +93,19 @@ $mainfont: "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 
 .touch_q {
 	display: inline-block;
-	margin-right: 5px;
 	padding-left: 10px;
+	vertical-align: bottom;
 }
 
 .user_img {
 	float: right;
+	background-color: #3D3D3D;
+	line-height: 35px;
+	border-radius: 100%;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	color: white;
 }
 
 .votearrows {
@@ -58,4 +115,33 @@ $mainfont: "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 
 .vote_counter {
 	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+}
+
+.show_question {
+	width: 70%;
+	margin-left: 0;
+	position: relative;
+}
+
+.tag_style {
+	background-color: #f0565d;
+	color: white;
+	padding: 2px;
+}
+
+.edit_delete, .glyphicon-trash, .glyphicon-edit {
+	float: right;
+	margin-left: 10px;
+	color: #3D3D3D;
+	font-size: 1.1em;
+}
+.edit_delete:hover {
+	text-decoration: none;
+}
+
+.answer_form {
+	width: 70%;
+	margin-left: 34px;
 }

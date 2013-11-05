@@ -9,13 +9,13 @@ class QuestionsController < ApplicationController
 	end
 
 	def create
-		@question = Question.create(params[:question].permit(:title, :body, :tag_list))
-		redirect_to :action => "show", :id => @question._id
-
-		@question.vote_count = 0
-
+		if current_user
+			@question = Question.create(params[:question].permit(:title, :body, :tag_list))
+			redirect_to :action => "show", :id => @question._id
+		end
 	end
 
+	# hm, show and edit are the same?
 	def show
 		@question = Question.find(params[:id])
 	end
@@ -50,12 +50,6 @@ class QuestionsController < ApplicationController
   	@question.save
   	redirect_to :back
   end
-
-  # def add_tags
-		# @question = Question.find(params[:id])
-		# @tag = @question.tags.create!(params[:tag].permit(:tag_name))
-		# redirect_to @question, notice: "Answer created!"
-  # end
 
 	def destroy
 		Question.find(params[:id]).destroy

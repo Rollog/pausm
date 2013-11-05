@@ -1,23 +1,61 @@
-<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"> 
 
-	<script type="text/javascript"> 
-	
-	$(window).bind('scroll',function(e){
-	    parallaxScroll();
-	});
-	 
-	function parallaxScroll(){
-	    var scrolled = $(window).scrollTop();
-	    $('.homediv').css('top',(0-(scrolled*.2))+'px');
-	    $('.hometext').css((0-(scrolled*.2))+'px');
-	    $('.home_container').css('top',(0-(scrolled*.8))+'px');
-	}
-	</script>
+$(window).ready(function(){
+
+    // w/o this minor timeout it hangs on video load
+    $('.glyphicon-expand').click(function(){
+        $('.glyphicon-expand').hide("fast");
+        $('.introvid').slideDown( 300 ).show("slow", repeat);
+        $('.introvid')[0].play();
+        return false;
+    });
+
+    $('.introvid').click(function(){
+        $('.introvid')[0].pause();
+        return false;
+    });
+
+    function repeat() {
+        setTimeout( "jQuery('.glyphicon-repeat').show('slow');", 14000 );
+        $('.glyphicon-remove').show("slow");
+        $('.glyphicon-remove').click(function(){
+            $('.introvid, .glyphicon-remove, .glyphicon-repeat').slideDown( 300 ).hide("fast");
+            $('.glyphicon-expand').show("fast");
+            return false;
+        });
+        $('.glyphicon-repeat').click(function(){
+            $('.introvid')[0].play();
+            return false;
+        });
+    };
+});
+
+// jQuery(document).ready(function () {
+//     //hide a div after 3 seconds
+//     setTimeout( "jQuery('.introvid').hide();",15000 );
+// });
+
+$(window).bind('scroll',function(e){
+    parallaxScroll();
+});
+ 
+function parallaxScroll(){
+    var scrolled = $(window).scrollTop();
+    $('.homediv').css('top',(0-(scrolled*.2))+'px');
+    // $('.glyphicon-expand').css((0-(scrolled*.6))+'px');
+    // $('.hometext').css((0-(scrolled*.05))+'px');
+    $('.home_container').css((0-(scrolled*20))+'px');
+}
+
+</script>
 
 <header class="homediv">
-	<%# image_tag "homestudio.jpeg", :class => "homeslider" %>
-	
+    <%= video_tag "pausm_10.mp4", class: "introvid" %>
+    <i class="glyphicon glyphicon-repeat"></i>
+    <i class="glyphicon glyphicon-remove"></i>
 </header>
+<i class="glyphicon glyphicon-expand"></i>
+
 <h1 class="hometext">PAUSE. FIX. PLAY.</h1>
 <div id="home_container">
 	<div class="home_entries">

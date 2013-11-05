@@ -1,24 +1,40 @@
 <div class="page_container">
-	<h1><%= @question.title %></h1> <br>
-	<div class="question_content"><p>
-		<%= @question.body %></p></div>
-		<%= link_to "U", upvote_path(id: @question.id) %>
-		<br>
-		<%= @question.vote_count %><br>
-	<%= link_to 'Edit', edit_question_path(@question) %>
-	<%# link_to 'Delete', edit_question_path(@question) %><br>
-	Tags: <%= raw @question.tags.map(&:tag_name).map { |t| link_to t, new_question_tag_path(t) }.join(', ') %>
 
-	<% if @question.answers.size > 0 %>
-	  <h3>Answers</h3>
-	  <% @question.answers.each do |a| %>
-		<%= a.body %> <br>
-	  <% end %>
-	<% end %>
+	<div class="show_question">
+		<div class="question_header">
+			<div class="vote_wrapper vote_wrapper_show">
+				<div class="vote_btn"><%= link_to (image_tag "uparrow.svg", :title => 'Vote Up!'), upvote_path(id: @question.id), class: "votearrows" %></div>
+			<div class="vote_counter"><%= @question.vote_count %></div>
+			<div class="vote_btn"><%= link_to (image_tag "downarrow.svg", :title => 'Vote Down..'), downvote_path(id: @question.id), class: "votearrows" %></div>
+			</div>
+		</div>
 
-	<h4>New Answer</h4>
-	<%= form_for [@question, Answer.new] do |f| %>
-	  <p class="new_answer_content"><%= f.text_area :body, :rows => 10 %></p>
-	  <p><%= f.submit %></p>
-	<% end %>
+		<h2 class="question_header actual_question"><span>Q: <%= @question.title %></span></h2> <br>
+	</div>
+		<div class="question_content">
+			<p><%= @question.body %></p>
+			<%= raw @question.tags.map(&:tag_name).map { |t| link_to t, new_question_tag_path(t), class: "tag_style" }.join(', ') %>
+			<%= link_to '', { action: "destroy", id: @question.id }, {method: :delete, data: { confirm: "Are you sure?" }, class: "edit_delete glyphicon glyphicon-trash" } %>
+			<%= link_to '', edit_question_path(@question), class: "edit_delete glyphicon glyphicon-edit" %>
+		</div>
+
+			<%# @question.answers.answer_count %>
+
+		<div class="answer_content">		
+			<% if @question.answers.size > 0 %>
+			  <h3>Answers</h3>
+			  <% @question.answers.each do |a| %>
+					<%= a.body %> <br>
+			  <% end %>
+			<% end %>
+		</div>
+		<div class="answer_form">
+			<h4>New Answer</h4>
+			<%= form_for [@question, Answer.new] do |f| %>
+
+			  <p><%= f.text_area :body, :rows => 10, class: "new_answer_content" %></p>
+			  <p><%= f.submit "Post Answer!", class: "btn" %></p>
+			<% end %>
+		</div>
+
 </div>

@@ -1,21 +1,25 @@
 <div class="page_container">
-	<%= form_for @user, {url: "/authentications", method: "post"} do |a| %>
+	<div class="signup_div">
+		<div class="signup_wrapper">
+		<%= form_for @user, {url: "/authentications", method: "post", class: "signup_wrapper"} do |a| %>
 
-		<p>
-			<%= a.label :email, "Email:" %> <br>
-			<%= a.text_field :email %>
-		</p>
+			<p>
+				<%= a.label :email, "Email:"  %> <br>
+				<%= a.text_field :email, class: "form_style" %>
+			</p>
 
-		<p>
-			<%= a.label :password, "Password:" %> <br>
-			<%= a.password_field :password %>
-		</p>
+			<p>
+				<%= a.label :password, "Password:" %> <br>
+				<%= a.password_field :password, class: "form_style" %>
+			</p>
 
-		<p>
-			<%= a.submit "Login" %>
-		</p>
-		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+			<p>
+				<%= a.submit "Login", class: "submit_btn" %>
+			</p>
+			<p>New user? <%= link_to "Sign up now!", signup_path %></p>
 
-	<% end %>
-	User ID: <%= session[:user_id] %>
+		<% end %>
+		User ID: <%= session[:user_id] %>
+		</div>
+	</div>
 </div>

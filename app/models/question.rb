@@ -9,7 +9,7 @@ class Question
 	has_many :answers
 	has_and_belongs_to_many :tags
 
-	# belongs_to :user
+	belongs_to :user
 
 	def self.tagged_with(name)
 	  Tag.find_by_name!(name).questions
