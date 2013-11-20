@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 gem "mongoid", github: "mongoid/mongoid"
 gem 'bcrypt-ruby'
 
+gem "paperclip", "~> 3.0"
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -34,9 +36,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development, :test do
-	gem 'better_errors'
-end
+# group :development, :test do
+# 	gem 'better_errors'
+# end
 
 group :production do
 	gem 'rails_12factor'

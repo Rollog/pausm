@@ -62,7 +62,7 @@ body {
 	color: #3D3D3D;
 	font-size: 16px;
 	font-weight: bold;
-	// background-color: #d2315d;
+	background-color: white;
 	// opacity: .9;
 }
 .signin:hover {
@@ -155,7 +155,7 @@ h1 {
 .signup_div {
 	width: 400px;
 	height: 490px;
-	background-image: url(fresh_snow.png);
+	background-image: asset-url(fresh_snow.png);
 	margin: 0 auto;
 	position: relative;
 	border: 2px solid #3D3D3D;
@@ -170,10 +170,14 @@ h1 {
  
 .form_style {
 	padding: 10px;
-	border: 2px solid #3D3D3D;
 	width: 300px;
 	margin: 0 auto;
-	box-shadow: 0px 0px 3px 1px #d2315d;
+	
+}
+.form_style:focus {
+	border: 2px solid #3D3D3D;
+	box-shadow: 0px 0px 1px 1px #d2835d;
+	outline: none;
 }
 
 .submit_btn {
@@ -185,8 +189,6 @@ h1 {
 	color: white;
 	font-size: 20px;
 }
-
-
 
 .introvid {
 
@@ -206,6 +208,16 @@ h1 {
   /* for modern browsers use semi-transparent color on the border. nice! */
   // border:10px solid rgba(82, 82, 82, 0.698);
 
+}
+
+.sign_up_login_page {
+	width: 600px;
+	margin: 10px auto;
+}
+
+.signin_header {
+	text-align: center;
+	margin: 40px auto;
 }
 
 .clearfix {

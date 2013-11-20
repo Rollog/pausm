@@ -14,6 +14,7 @@ Pausm::Application.routes.draw do
   # post 'questions' => 'questions#create' # creating a new type
   # delete 'questions/:id' => 'questions#destroy'
 
+  # nested routing
   resources :users do
     resources :questions
   end

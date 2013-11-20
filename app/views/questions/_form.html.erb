@@ -1,17 +1,14 @@
 <%= form_for @question do |q| %>
 
-	<%= q.label :title, "Question:" %> <br>
-	<p class="question_title"><%= q.text_field :title %></p>
+	<p class="question_title"><%= q.text_area :title, placeholder: "Your Question", :rows => 2, class: "new_answer_content" %></p>
 	<br>
 	<br>
-	<%= q.label :body %> <br>
-	<p class="question_body"><%= q.text_area :body %></p>
+	<p class="question_body"><%= q.text_area :body, placeholder: "BODY", :rows => 10,  class: "new_answer_content" %></p>
 	<br>
 	<br>
-	<%= q.label :tag_list, "Tags (separate with commas)" %> <br>
-	<p class="question_body"><%= q.text_area :tag_list %></p>
+	<p class="question_body"><%= q.text_field :tag_list, placeholder: "Tags (separate with commas)", class: "new_answer_content" %></p>
 	<br>
 	<br>
-	<%= q.submit "SUBMIT" %>
+	<%= q.submit "SUBMIT", class: "submit_btn" %>
 
 <% end %>

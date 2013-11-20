@@ -5,7 +5,32 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+	<script>
+		$(function() {
+		    $(window).scroll(function(){
+		        var scrollTop = $(window).scrollTop();
+		        if(scrollTop != 0)
+		            $('.navbar-fixed-top').stop().animate({'opacity':'0.05'},200);
+		        else   
+		            $('.navbar-fixed-top').stop().animate({'opacity':'1'},200);
+		    });
+		     
+		    $('.navbar-fixed-top').hover(
+		        function (e) {
+		            var scrollTop = $(window).scrollTop();
+		            if(scrollTop != 0){
+		                $('.navbar-fixed-top').stop().animate({'opacity':'1'},200);
+		            }
+		        },
+		        function (e) {
+		            var scrollTop = $(window).scrollTop();
+		            if(scrollTop != 0){
+		                $('.navbar-fixed-top').stop().animate({'opacity':'0.05'},200);
+		            }
+		        }
+		    );
+		});
+	</script>
 </head>
 <body>
 

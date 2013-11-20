@@ -1,5 +1,6 @@
 <div class="page_container">
 
+	<!-- shows actual question with vote counter -->
 	<div class="show_question">
 		<div class="question_header">
 			<div class="vote_wrapper vote_wrapper_show">
@@ -17,23 +18,31 @@
 			<%= link_to '', { action: "destroy", id: @question.id }, {method: :delete, data: { confirm: "Are you sure?" }, class: "edit_delete glyphicon glyphicon-trash" } %>
 			<%= link_to '', edit_question_path(@question), class: "edit_delete glyphicon glyphicon-edit" %>
 		</div>
+		<!-- end of question -->
 
-			<%# @question.answers.answer_count %>
-
+		<!-- answers are populated below -->
 		<div class="answer_content">		
 			<% if @question.answers.size > 0 %>
-			  <h3>Answers</h3>
+			  <h3 class="answer_header">Answers</h3>
 			  <% @question.answers.each do |a| %>
-					<%= a.body %> <br>
+					<p class="answer_body">
+						<%= a.body %>
+						<%= link_to '', { action: "destroy", id: @question.id }, {method: :delete, data: { confirm: "Are you sure?" }, class: "edit_delete glyphicon glyphicon-trash" } %>
+						<%= link_to '', edit_question_path(@question), class: "edit_delete glyphicon glyphicon-edit" %>
+					</p>
 			  <% end %>
 			<% end %>
 		</div>
+		<!-- end of answers -->
+
+		<!-- answer form for question above -->
 		<div class="answer_form">
 			<h4>New Answer</h4>
 			<%= form_for [@question, Answer.new] do |f| %>
 
 			  <p><%= f.text_area :body, :rows => 10, class: "new_answer_content" %></p>
 			  <p><%= f.submit "Post Answer!", class: "btn" %></p>
+
 			<% end %>
 		</div>
 

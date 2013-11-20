@@ -1,32 +1,31 @@
 <div class="page_container">
-	<h1>Sign Up</h1>
+	<div class="signup_div">
+		<h1 class="signin_header">Sign Up</h1>
+		<div class="signup_wrapper">
+			<%= form_for @user do |u| %>
 
-	<%= form_for @user do |u| %>
+				<p>
+					<%= u.text_field :name, placeholder: "NAME", class: "form_style" %>
+				</p>
 
-		<p>
-			<%= u.label :name, "Name" %> <br>
-			<%= u.text_field :name %>
-		</p>
+				<p>
+					<%= u.text_field :email, placeholder: "EMAIL", class: "form_style" %>
+				</p>
 
-		<p>
-			<%= u.label :email, "Email:" %> <br>
-			<%= u.text_field :email %>
-		</p>
+				<p>
+					<%= u.password_field :password, placeholder: "PASSWORD", class: "form_style" %>
+				</p>
 
-		<p>
-			<%= u.label :password, "Password:" %> <br>
-			<%= u.password_field :password %>
-		</p>
+				<p>
+					<%= u.password_field :password_confirmation, placeholder: "CONFIRM PASSWORD", class: "form_style" %>
+				</p>
 
-		<p>
-			<%= u.label :password_confirmation, "Confirm Password: " %> <br>
-			<%= u.password_field :password_confirmation %>
-		</p>
+				<p>
+					<%= u.submit "Create New User", class: "submit_btn" %>
+				</p>
 
-		<p>
-			<%= u.submit "Create New User" %>
-		</p>
-
-	<% end %>
-	User ID: <%= session[:user_id] %>
+			<% end %>
+			User ID: <%= session[:user_id] %>
+		</div>
+	</div>
 </div>

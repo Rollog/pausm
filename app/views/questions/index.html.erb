@@ -1,13 +1,15 @@
 <div class="page_container">
 	<h1>QUESTIONS</h1>
+	<!-- want to link to filters for questions tags and users -->
 	<div class="question_nav_container">
 		<div class="questions_nav">Questions</div>
 		<div class="questions_nav">Tags</div>
 		<div class="questions_nav">User</div>
 	</div>
 		<div class="mainbar">
-
+			<!-- lists all submitted questions -->
 			<ul>
+				<!-- shows recently submitted question at the top -->
 			<% @questions.reverse_each do |q| %>
 				<li class="liststyle">
 					<div class="question_stack">
@@ -30,7 +32,7 @@
 			</ul>
 			
 	</div>
-	
+	<!-- data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K -->
 	<div class="sidebar">
 		ads
 	</div>

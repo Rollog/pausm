@@ -1,16 +1,15 @@
 <div class="page_container">
 	<div class="signup_div">
+		<h1 class="signin_header">Log In</h1>
 		<div class="signup_wrapper">
 		<%= form_for @user, {url: "/authentications", method: "post", class: "signup_wrapper"} do |a| %>
 
 			<p>
-				<%= a.label :email, "Email:"  %> <br>
-				<%= a.text_field :email, class: "form_style" %>
+				<%= a.text_field :email, placeholder: "EMAIL", class: "form_style" %>
 			</p>
 
 			<p>
-				<%= a.label :password, "Password:" %> <br>
-				<%= a.password_field :password, class: "form_style" %>
+				<%= a.password_field :password, placeholder: "PASSWORD", class: "form_style" %>
 			</p>
 
 			<p>

@@ -1,11 +1,13 @@
-<div class="page_container">
-<% if current_user %>
-	<h1>Post a Question</h1>
-		<%= render "form" %>
-<% else %>
-		<p>Signup to post a question <%= link_to "Sign up now!", signup_path %></p>
-		<p>or Sign in <%= link_to "Sign in now!", signin_path %></p>
-<% end %>
-
-	
+<div class="page_container ">
+	<% if current_user %>
+		<h1>Post a Question</h1>
+		<!-- brings in form to make a new question -->
+			<%= render "form" %>
+	<% else %>
+	<div class="sign_up_login_page">
+		<h2>You must be logged in to ask a question</h2>
+			<h4>Signup to post a question <%= link_to "Sign up now!", signup_path %></h4>
+			<h4>or Sign in <%= link_to "Sign in now!", signin_path %></h4>
+	<% end %>
+	</div>
 </div>

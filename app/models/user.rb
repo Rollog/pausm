@@ -12,8 +12,9 @@ class User
   field :hashed_password, type: String
 
   has_many :questions
-  # has_many :tags
-  # has_many :answers
+  has_many :answers
+
+  # has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 
 
   # This will tell us what regions to show on the map
