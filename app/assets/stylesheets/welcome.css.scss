@@ -1,6 +1,6 @@
 .homediv {
 	position: relative;
-	background-image: asset-url(homestudio.jpeg);
+	background-image: asset-url('homestudio.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -123,7 +123,7 @@ li {
 }
 
 #entry-1 {
-	background-image: asset-url(ableton-push-tour-02.png__1000x563_q85_crop_upscale.png);
+	background-image: asset-url('ableton-push-tour-02.png__1000x563_q85_crop_upscale.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-transition: opacity 250ms ease-in-out;
@@ -135,7 +135,7 @@ li {
 }
 
 #entry-2 {
-	background-image: asset-url("live jam on ableton.png");
+	background-image: asset-url('live_jam_on_ableton.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-transition: opacity 250ms ease-in-out;
@@ -147,7 +147,7 @@ li {
 }
 
 #entry-3 {
-	background-image: asset-url(push_04_72dpi_rgb.jpg);
+	background-image: asset-url('push_04_72dpi_rgb.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-transition: opacity 250ms ease-in-out;
