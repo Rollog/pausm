@@ -15,7 +15,6 @@ class QuestionsController < ApplicationController
 		end
 	end
 
-	# hm, show and edit are the same?
 	def show
 		@question = Question.find(params[:id])
 	end
